@@ -7,6 +7,17 @@ public class Main
         Fighter player2 = new Fighter();
         Battle fight = new Battle(player1,player2);
         
+        fight.printRoundUpdate();
         fight.takeTurn();
+        fight.swapFighters();
+        fight.printRoundUpdate();
+        fight.takeTurn();
+        fight.swapFighters();
+        fight.printRoundUpdate();
+        fight.takeTurn();
+        fight.swapFighters();
+        fight.printRoundUpdate();
+        fight.takeTurn();
+        fight.swapFighters();
     }
 }

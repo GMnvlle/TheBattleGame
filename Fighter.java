@@ -1,3 +1,4 @@
+import java.util.Random;
 
 public class Fighter
 {
@@ -7,6 +8,7 @@ public class Fighter
     private String name;
     private int healthPoints;
     private int attackDamage;
+    private Random rng = new Random();
     
     /**
      * Constructors
@@ -49,8 +51,9 @@ public class Fighter
      * Methods
      */
     public int dealDamage(){
-        System.out.println(name+" deals "+attackDamage+" damage");
-        return attackDamage;
+        int damageDelt = rng.nextInt(attackDamage)+1;
+        System.out.println(name+" deals "+damageDelt+" damage");
+        return damageDelt;
     }
     public void takeDamage(int amount){
         healthPoints-=amount;
