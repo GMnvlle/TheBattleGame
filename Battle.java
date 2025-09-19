@@ -1,4 +1,4 @@
-
+import java.util.Scanner;
 public class Battle
 {
     /**
@@ -34,7 +34,7 @@ public class Battle
     public void takeTurn(){
         int amount = attacker.dealDamage();
         defender.takeDamage(amount);
-        numRounds+=1;
+        numRounds++;
     }
     public void swapFighters(){
         Fighter newDefender = attacker;

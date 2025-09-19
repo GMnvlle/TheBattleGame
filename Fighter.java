@@ -8,7 +8,7 @@ public class Fighter
     private String name;
     private int healthPoints;
     private int attackDamage;
-    private Random rng = new Random();
+    private Random rng;
     
     /**
      * Constructors
@@ -17,11 +17,13 @@ public class Fighter
         name = "Jim Bob";
         healthPoints = 100;
         attackDamage = 30;
+        rng = new Random();
     }
     public Fighter(String initName, int initHealth, int initDamage){
         name = initName;
         healthPoints = initHealth;
         attackDamage = initDamage;
+        rng = new Random();
     }
     /**
      * Getters
