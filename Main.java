@@ -1,4 +1,7 @@
-
+/**
+ * Main class:
+ * Plays the game
+ */
 public class Main
 {
     public static void main(String[] args) {
@@ -8,18 +11,11 @@ public class Main
         Battle fight = new Battle(player1,player2);
         
         fight.printStartInfo();
-        fight.printRoundUpdate();
-        fight.takeTurn();
-        fight.swapFighters();
-        fight.printRoundUpdate();
-        fight.takeTurn();
-        fight.swapFighters();
-        fight.printRoundUpdate();
-        fight.takeTurn();
-        fight.swapFighters();
-        fight.printRoundUpdate();
-        fight.takeTurn();
-        fight.swapFighters();
+        while(!fight.getBattleOver()){
+            fight.printRoundUpdate();
+            fight.takeTurn();
+            fight.swapFighters();
+        }
         fight.printEndInfo();
     }
 }
